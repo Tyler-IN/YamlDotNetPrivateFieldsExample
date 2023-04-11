@@ -27,7 +27,7 @@ public sealed class YamlSerializationEnforcedTypeInspector : TypeInspectorSkelet
     public ReflectionFieldDescriptor(FieldInfo fieldInfo, ITypeInspector typeInspector) {
       _fieldInfo = fieldInfo;
       _typeInspector = typeInspector;
-      ScalarStyle = fieldInfo.FieldType.IsPrimitive ? ScalarStyle.Literal : ScalarStyle.Any;
+      ScalarStyle = ScalarStyle.Any;
     }
 
     public string Name
